@@ -13,7 +13,6 @@ import {
   IconWrapper,
 } from "./styles";
 import { ProjectDisplayProps } from "./types";
-import { Icon } from "@iconify/react";
 
 export default function ProjectDisplay({
   tabs,

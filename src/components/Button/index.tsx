@@ -2,7 +2,6 @@
 import React from "react";
 import { StyledButton, StyledLoader, StyledText } from "./styles";
 import { ButtonProps } from "./types";
-import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Button({
   color = "primary",

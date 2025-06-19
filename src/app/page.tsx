@@ -1,5 +1,4 @@
 "use client";
-import Advantages from "@/sections/Advantages";
 import ContactForm from "@/sections/ContactForm";
 import Hero from "@/sections/Hero";
 import Projetos from "@/sections/Projetos";
@@ -14,7 +13,6 @@ export default function Home() {
       <Team />
       <ContactForm />
       <ToastContainer />
-      {/* <Advantages /> */}
     </>
   );
 }
