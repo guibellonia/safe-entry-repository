@@ -9,7 +9,7 @@ const teamTabs: TabItemType[] = [
   {
     title: "Guilherme Bellonia",
     description:
-      "Funcionário do Unipam, atua como Front-End Developer e Web Designer. Guilherme tem um histórico sólido em competições de tecnologia: conquistou o pódio 4 vezes na Infoweek, sendo bicampeão com sua equipe. Além disso, foi o vencedor do Hackathon Coffee 2023, demonstrando sua capacidade criativa e técnica em soluções de desenvolvimento ágil.",
+      "Front-End Developer e Web Designer a três anos e funcionário do UNIPAM. Guilherme tem um histórico sólido em competições de tecnologia: conquistou o pódio 4 vezes na Infoweek, sendo bicampeão com sua equipe. Além disso, foi o vencedor do Hackathon Coffee 2023, demonstrando sua capacidade criativa e técnica em soluções de desenvolvimento ágil.",
     tags: ["Front-End", "Designer"],
     linkedin: "https://www.linkedin.com/in/guilherme-bellonia-2b27a7268/",
     instagram: "https://www.instagram.com/belloniagui/",
@@ -17,7 +17,7 @@ const teamTabs: TabItemType[] = [
   {
     title: "Thiago de P. Silva",
     description:
-      "Atualmente trabalhando na GOW, Thiago é Full-Stack Developer e Data Analyst. Sua experiência envolve tanto o desenvolvimento back-end quanto análise de dados. Ao longo de sua trajetória acadêmica, foi 4 vezes pódio na Infoweek, com dois títulos de campeão, mostrando forte capacidade de resolução de problemas e liderança técnica.",
+      "Thiago é Full-Stack Developer e Data Analyst e atualmente funcionário na GOW. Sua experiência envolve tanto o desenvolvimento back-end quanto análise de dados. Ao longo de sua trajetória acadêmica, foi 4 vezes pódio na Infoweek, com dois títulos de campeão, mostrando forte capacidade de resolução de problemas e liderança técnica.",
     tags: ["Full-Stack"],
     linkedin: "https://www.linkedin.com/in/thiago1287/",
     instagram: "https://www.instagram.com/taigakilla/",
