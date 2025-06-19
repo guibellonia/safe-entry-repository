@@ -29,9 +29,9 @@ export default function Navbar() {
     <NavbarWrapper>
       <StyledNavbarContainer>
         <Image
-          src={"/images/four-coding-logo.svg"}
-          height={46}
-          width={46}
+          src={"/images/logo-typed.svg"}
+          height={64}
+          width={64}
           alt=""
         />
         {isMobile && (
