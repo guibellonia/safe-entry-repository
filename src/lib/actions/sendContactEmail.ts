@@ -18,26 +18,19 @@ export async function sendContactEmail({
       to: ["four4coding@gmail.com", "accounts@fourcoding.com"],
       subject: `Novo contato de ${nome}`,
       html: `
-        <div style="font-family: 'DM Sans', 'Figtree', Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
-          <h2 style="color: #333333; text-align: left; font-family: 'DM Sans', 'Figtree', Arial, sans-serif;">📩 Novo Contato Recebido</h2>
-          
-          <p style="font-size: 16px; color: #555555;">
-            <strong>Nome:</strong> ${nome}
-          </p>
-          
-          <p style="font-size: 16px; color: #555555;">
-            <strong>Email:</strong> ${email}
-          </p>
+        <div style="font-family: 'DM Sans', 'Figtree', Arial, sans-serif; max-width: 600px; margin: auto; background-color: #1F1F1F; color: #FEFEFE; border-radius: 10px; padding: 20px; border: 1px solid #333;">
+          <h2 style="color: #F9F9F9; text-align: left; margin-bottom: 20px;">📧 Novo Contato Recebido</h2>
 
-          <p style="font-size: 16px; color: #555555; margin-top: 20px;">
-            <strong>Mensagem:</strong>
-          </p>
-          <div style="font-size: 15px; color: #444444; background-color: #ffffff; padding: 15px; border-radius: 5px; border: 1px solid #dddddd; white-space: pre-line; font-family: 'DM Sans', 'Figtree', Arial, sans-serif;">
+          <p style="font-size: 16px; color: #E5E5E5;"><strong>Nome:</strong> ${nome}</p>
+          <p style="font-size: 16px; color: #E5E5E5;"><strong>Email:</strong> ${email}</p>
+
+          <p style="font-size: 16px; color: #E5E5E5; margin-top: 20px;"><strong>Mensagem:</strong></p>
+          <div style="font-size: 15px; color: #F9F9F9; background-color: #333; padding: 15px; border-radius: 6px; border: 1px solid #444;">
             ${mensagem}
           </div>
 
-          <p style="font-size: 12px; color: #999999; text-align: center; margin-top: 30px; font-family: 'DM Sans', 'Figtree', Arial, sans-serif;">
-            Este e-mail foi gerado automaticamente através do formulário de contato do site fourcoding.com
+          <p style="font-size: 12px; color: #AAAAAA; text-align: center; margin-top: 30px;">
+            Este e-mail foi gerado automaticamente através do formulário de contato do site <strong>fourcoding.com</strong>
           </p>
         </div>
       `,
@@ -48,28 +41,36 @@ export async function sendContactEmail({
       to: [email],
       subject: `Recebemos seu contato!`,
       html: `
-        <div style="font-family: 'DM Sans', 'Figtree', Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
-          <h2 style="color: #333333; text-align: left;">✅ Contato recebido com sucesso!</h2>
-          <p style="font-size: 16px; color: #555555;">Olá ${nome},</p>
+          <div style="font-family: 'DM Sans', 'Figtree', Arial, sans-serif; max-width: 600px; margin: auto; background-color: #1F1F1F; color: #FEFEFE; border-radius: 10px; padding: 20px; border: 1px solid #333; box-sizing: border-box;">
+            <h2 style="color: #F9F9F9; text-align: left; margin-bottom: 20px;">✔️ Contato recebido com sucesso!</h2>
 
-          <p style="font-size: 15px; color: #555555;">
+          <p style="font-size: 16px; color: #E5E5E5;">Olá ${nome},</p>
+
+          <p style="font-size: 15px; color: #E5E5E5;">
             Recebemos sua mensagem e em breve nossa equipe entrará em contato com você.
           </p>
 
-          <p style="font-size: 15px; color: #555555;">Aqui está uma cópia da sua mensagem:</p>
+          <p style="font-size: 15px; color: #E5E5E5;">Aqui está uma cópia da sua mensagem:</p>
 
-          <div style="font-size: 15px; color: #444444; background-color: #ffffff; padding: 15px; border-radius: 5px; border: 1px solid #dddddd; white-space: pre-line;">
+          <div style="font-size: 15px; color: #F9F9F9; background-color: #333; padding: 15px; border-radius: 6px; border: 1px solid #444;">
             ${mensagem}
           </div>
 
-          <p style="font-size: 14px; color: #555555; margin-top: 20px;">
+          <p style="font-size: 14px; color: #AAAAAA; margin-top: 20px;">
             Enquanto isso, se precisar falar com a gente, é só responder este e-mail.
           </p>
+          
+          <div style="width: 100%; margin: 32px 0 32px 0;">
+              <a href="https://www.fourcoding.com" target="_blank" style="text-decoration: none; background-color: #2F2F2F; padding: 0.5rem 0rem; border-radius: 8px; border: 1px solid #4F4F4F; text-align: center;">
+                  <button style="width: 100%; background: none; border: none; outline: none; cursor: pointer; color: #F9F9F9">
+                  Nosso Site
+                  </button>
+              </a>
+          </div>
 
-<div style="text-align: center; margin-top: 30px;">
-  <img src="https://raw.githubusercontent.com/fourCodingTeam/fourCoding-solutions-portfolio/main/public/images/logo-typed.svg" alt="FourCoding Logo" style="width: 120px; height: auto;" />
-</div>
-
+          <div style="text-align: center;">
+            <p style="font-size: 15px; color: #E5E5E5;">Atenciosamente, Equipe FourCoding</p>
+          </div>
         </div>
       `,
     });
