@@ -9,7 +9,7 @@ export const TeamsContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   @media ${theme.media.tablet} {
     min-height: 80dvh;
   }

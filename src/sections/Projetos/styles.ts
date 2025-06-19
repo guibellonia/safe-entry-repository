@@ -9,7 +9,7 @@ export const ProjectsContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  padding: 4rem 1rem 2rem 1rem;
+  padding: 6rem 1rem 4rem 1rem;
   background: radial-gradient(
     circle at right,
     ${theme.colors.primary},
