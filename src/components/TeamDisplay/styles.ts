@@ -14,6 +14,7 @@ export const tagColors: Record<string, string> = {
   "Back-End": "#2196F3",
   "Project Owner": "#FF9800",
   "Full-Stack": "#9C27B0",
+  "DevOps": "#19bde3",
   Designer: "#E91E63",
   "Data Analyst": "#3F51B5",
 };

@@ -6,6 +6,7 @@ export interface TabItemType {
     | "Back-End"
     | "Project Owner"
     | "Full-Stack"
+    | "DevOps"
     | "Designer"
     | "Data Analyst"
   )[];
