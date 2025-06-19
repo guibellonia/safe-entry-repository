@@ -14,8 +14,8 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Safe Entry",
-  description: "Seu condomínio mais seguro",
+  title: "Four Coding",
+  description: "Construindo as soluções para seus maiores problemas",
 };
 
 export default function RootLayout({
