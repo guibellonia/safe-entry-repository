@@ -18,7 +18,7 @@ export default function Projetos() {
           {
             title: "Safe Entry",
             description:
-              "Sistema inteligente de segurança e controle de acesso para condomínios. Oferece registro digital de entradas, QR Codes para visitantes e comunicação integrada com a administração.",
+              "Projeto desenvolvido com React Native, Expo, C#, Supabase, MongoDB e Azure, com o objetivo de aumentar a segurança e facilitar o controle de entradas para condomínios. Oferece registro digital de entradas, QR Codes para visitantes e comunicação integrada com a administração.",
             img: {
               src: "/images/call-to-action.png",
             },
@@ -26,7 +26,7 @@ export default function Projetos() {
           {
             title: "Fazendata",
             description:
-              "Plataforma de gestão agrícola com foco em produtividade e análise de dados em tempo real para fazendas de pequeno e grande porte.",
+              "Aplicativo desenvolvido com React Native, Expo, NestJS e Supabase, de gestão de gado leiteiro com foco em produtividade, integração com a tecnologia NFC para controle de informações do gado, funcionalidades de cadastro, edição, listagem e controle gado, para fazendas de pequeno e grande porte.",
             img: {
               src: "/images/fazendata-call-to-action.png",
             },
