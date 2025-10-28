@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Figtree } from "next/font/google";
 import "./global.css";
 import Navbar from "@/components/Navbar";
+import ClientLayout from "./ClientLayout";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -32,8 +33,7 @@ export default function RootLayout({
         sizes="<generated>"
       />
       <body className={`${dmSans.variable} ${figtree.variable}`}>
-        <Navbar />
-        {children}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
