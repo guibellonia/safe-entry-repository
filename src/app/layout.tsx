@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Figtree } from "next/font/google";
 import "./global.css";
-import Navbar from "@/components/Navbar";
 import ClientLayout from "./ClientLayout";
 
 const dmSans = DM_Sans({
