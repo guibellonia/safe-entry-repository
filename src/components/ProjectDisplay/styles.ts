@@ -1,6 +1,7 @@
 "use client";
 import styled from "styled-components";
 import { theme } from "@/constants/theme";
+import Link from "next/link";
 
 interface TabItemProps {
   $active?: boolean;
@@ -41,9 +42,18 @@ export const TabItem = styled.li<TabItemProps>`
   }
   &:hover {
     background: ${({ $active }: TabItemProps) =>
-      $active ? theme.colors.primaryHover : theme.colors.backgroundHover};
+    $active ? theme.colors.primaryHover : theme.colors.backgroundHover};
   }
 `;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.1s ease;
+  &:hover {
+    color: ${theme.colors.textMutedHover};
+  }
+`
 
 export const ContentWrapper = styled.div`
   max-width: 1320px;
@@ -60,17 +70,25 @@ export const Header = styled.div`
   gap: 1rem;
   padding: 1rem;
 `;
+
 export const IconWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 `;
+
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 0.5rem;
 `;
-export const Title = styled.h2`
+
+export const Title = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-figtree);
   font-weight: 700;
   font-size: 24pt;

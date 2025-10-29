@@ -7,37 +7,33 @@ import type { TabItemType } from "@/components/TeamDisplay/types";
 
 const teamTabs: TabItemType[] = [
   {
-    title: "Guilherme Bellonia",
-    description:
-      "Front-End Developer e Web Designer a três anos e funcionário do UNIPAM. Guilherme tem um histórico sólido em competições de tecnologia: conquistou o pódio 4 vezes na Infoweek, sendo bicampeão com sua equipe. Além disso, foi o vencedor do Hackathon Coffee 2023, demonstrando sua capacidade criativa e técnica em soluções de desenvolvimento ágil.",
-    tags: ["Front-End", "Designer"],
-    linkedin: "https://www.linkedin.com/in/guilherme-bellonia-2b27a7268/",
-    instagram: "https://www.instagram.com/belloniagui/",
+    "title": "Guilherme Bellonia",
+    "description": "Full-Stack Developer e Web Designer há três anos, Guilherme é o tipo de profissional que transforma café em código (e bons resultados). Com um histórico de respeito em competições, já subiu ao pódio 4 vezes na Infoweek — sendo bicampeão com sua equipe — e levou o troféu no Hackathon Coffee 2023. Criativo, técnico e sempre em busca do próximo desafio, ele une estética e performance em tudo o que faz.",
+    "tags": ["Full-Stack", "Designer", "DevOps", "Project Architect"],
+    "linkedin": "https://www.linkedin.com/in/guilherme-bellonia-2b27a7268/",
+    "instagram": "https://www.instagram.com/belloniagui/"
   },
   {
-    title: "Thiago de P. Silva",
-    description:
-      "Thiago é Full-Stack Developer e Data Analyst e atualmente funcionário na GOW. Sua experiência envolve tanto o desenvolvimento back-end quanto no front-end. Ao longo de sua trajetória acadêmica, foi 4 vezes pódio na Infoweek, com dois títulos de campeão, mostrando forte capacidade de resolução de problemas e liderança técnica.",
-    tags: ["Full-Stack", "DevOps"],
-    linkedin: "https://www.linkedin.com/in/thiago1287/",
-    instagram: "https://www.instagram.com/taigakilla/",
+    "title": "Thiago de P. Silva",
+    "description": "Thiago é Full-Stack Developer — o cara que entende o front, o back e tudo o que há entre eles. Com um perfil técnico afiado e pensamento estratégico, já foi 4 vezes pódio na Infoweek, garantindo dois títulos de campeão. Sua combinação de liderança e código limpo faz dele aquele dev que resolve o problema antes mesmo que ele apareça.",
+    "tags": ["Full-Stack", "Software Engineer", "DevOps", "Project Architect"],
+    "linkedin": "https://www.linkedin.com/in/thiago1287/",
+    "instagram": "https://www.instagram.com/taigakilla/"
   },
   {
-    title: "João Pedro S. M.",
-    description:
-      "Back-End Developer e Data Analyst na Auma Agronegócios (Tekoa), João Pedro possui uma carreira promissora na área de tecnologia. Também 4 vezes pódio na Infoweek, com dois títulos de campeão, João se destaca ainda por ter alcançado a 2ª fase da Olimpíada Brasileira de Informática (OBI) em 2023, reforçando sua capacidade lógica e técnica.",
-    tags: ["Back-End", "Data Analyst"],
-    linkedin: "https://www.linkedin.com/in/joaopedrosmbraga/",
-    instagram: "https://www.instagram.com/joaopedrosmbraga/",
+    "title": "João Pedro S. M. Braga",
+    "description": "Full-Stack Developer com futuro promissor, João Pedro é movido por lógica, café e desafios. Já foi 4 vezes pódio na Infoweek, com dois títulos de campeão, e chegou à 2ª fase da Olimpíada Brasileira de Informática (OBI) em 2023. Detalhista e curioso, ele une raciocínio técnico com criatividade, sempre buscando novas formas de elevar o nível do que desenvolve.",
+    "tags": ["Full-Stack", "Software Engineer", "Database Analyst"],
+    "linkedin": "https://www.linkedin.com/in/joaopedrosmbraga/",
+    "instagram": "https://www.instagram.com/joaopedrosmbraga/"
   },
   {
-    title: "Maurício Hansen",
-    description:
-      "Product Owner (PO) e Front-End Developer na GOW, Maurício combina visão estratégica com habilidades de desenvolvimento. Durante sua trajetória, foi 3 vezes pódio na Infoweek, sendo campeão em uma das edições. Em 2024, conquistou o 1º lugar na Feira de Inovação e Tecnologia do Triângulo Mineiro, destacando-se pela capacidade de liderança e entrega de soluções inovadoras.",
-    tags: ["Project Owner", "Front-End"],
-    linkedin: "https://www.linkedin.com/in/hansen-simoes/",
-    instagram: "https://www.instagram.com/hansen_simoes/",
-  },
+    "title": "Maurício Hansen",
+    "description": "Product Owner (PO) e Front-End Developer na GOW, Maurício é o equilíbrio perfeito entre estratégia e execução. Já foi 3 vezes pódio na Infoweek — campeão em uma das edições — e garantiu o 1º lugar na Feira de Inovação e Tecnologia do Triângulo Mineiro em 2024. Com visão de produto, liderança e um toque criativo, ele faz ideias saírem do papel e ganharem vida (com estilo).",
+    "tags": ["Project Owner", "Quality Assurance"],
+    "linkedin": "https://www.linkedin.com/in/hansen-simoes/",
+    "instagram": "https://www.instagram.com/hansen_simoes/"
+  }
 ];
 
 export default function Team() {

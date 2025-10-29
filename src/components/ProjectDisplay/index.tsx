@@ -11,13 +11,14 @@ import {
   TabItem,
   TextWrapper,
   IconWrapper,
+  StyledLink,
 } from "./styles";
 import { ProjectDisplayProps } from "./types";
 
 export default function ProjectDisplay({
   tabs,
-  activeTabIndex,
   onTabChange,
+  activeTabIndex,
 }: ProjectDisplayProps) {
   const activeTab = tabs[activeTabIndex];
 
@@ -35,27 +36,27 @@ export default function ProjectDisplay({
         ))}
       </TabList>
 
-      <ContentWrapper>
-        <Header>
-          <TextWrapper>
-            <Title>{activeTab.title}</Title>
-            <Description>{activeTab.description}</Description>
-          </TextWrapper>
-          <IconWrapper>
-            {/* <Icon icon={"mdi-light:arrow-right"} fontSize={32} /> */}
-          </IconWrapper>
-        </Header>
+      <StyledLink href={`/projects/${activeTab.slug}`}>
+        <ContentWrapper>
+          <Header>
+            <TextWrapper>
+              <Title>{tabs[activeTabIndex].icon} {activeTab.title}</Title>
+              <Description>{activeTab.description}</Description>
+            </TextWrapper>
+            <IconWrapper />
+          </Header>
 
-        <ImageWrapper>
-          <Image
-            src={activeTab.img.src}
-            alt={`${activeTab.title} Preview`}
-            layout="responsive"
-            width={800}
-            height={400}
-          />
-        </ImageWrapper>
-      </ContentWrapper>
+          <ImageWrapper>
+            <Image
+              src={activeTab.img.src}
+              alt={`${activeTab.title} Preview`}
+              layout="responsive"
+              width={800}
+              height={400}
+            />
+          </ImageWrapper>
+        </ContentWrapper>
+      </StyledLink>
     </Container>
   );
 }

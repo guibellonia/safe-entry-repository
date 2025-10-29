@@ -10,7 +10,7 @@ export const StyledButton = styled.button<Pick<ButtonProps, "color">>`
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   width: 100%;
 
   ${({ color }) =>
@@ -31,7 +31,7 @@ export const StyledButton = styled.button<Pick<ButtonProps, "color">>`
       color: ${theme.colors.background};
 
       &:hover {
-        background-color: #1a1a1a;
+        background-color: #0a0a0a;
       }
     `}
 
