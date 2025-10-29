@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { theme } from "@/constants/theme";
 
 const smoothSpin = keyframes`
@@ -42,14 +43,14 @@ const LoaderContainer = styled.div`
   gap: 6px;
 `;
 
-const SquarePiece = styled.div<{ index: number }>`
+const SquarePiece = styled.div<{ $index: number }>`
   width: 1.65rem;
   height: 1.65rem;
   background-color: ${theme.colors.primary};
   border-radius: 4px;
   transition: background-color 0.4s ease;
   animation: ${smoothSpin} 2.4s ease-in-out infinite;
-  animation-delay: ${({ index }) => index * 0.3}s;
+  animation-delay: ${({ $index }) => $index * 0.3}s;
 `;
 
 export default function ClientLayout({
@@ -80,7 +81,7 @@ export default function ClientLayout({
       <LoaderWrapper>
         <LoaderContainer>
           {[0, 1, 2, 3].map((i) => (
-            <SquarePiece key={i} index={i} />
+            <SquarePiece key={i} $index={i} />
           ))}
         </LoaderContainer>
       </LoaderWrapper>
@@ -91,6 +92,7 @@ export default function ClientLayout({
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }

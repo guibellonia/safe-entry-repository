@@ -3,8 +3,8 @@ export type Project = {
   title: string;
   description: string;
   img: { src: string; alt?: string };
-  iconName?: string; // opcional
-  tech?: string[]; // opcional: lista de tecnologias
+  iconName?: string;
+  tech?: string[];
   github?: string;
   liveUrl?: string;
 };

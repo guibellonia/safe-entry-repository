@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Container,
   Header,
@@ -11,9 +12,9 @@ import {
   TabItem,
   TextWrapper,
   IconWrapper,
+  StyledLink,
 } from "./styles";
 import { ProjectDisplayProps } from "./types";
-import { Lock } from "lucide-react";
 
 export default function ProjectDisplay({
   tabs,
@@ -36,27 +37,27 @@ export default function ProjectDisplay({
         ))}
       </TabList>
 
-      <ContentWrapper>
-        <Header>
-          <TextWrapper>
-            <Title>{tabs[activeTabIndex].icon} {activeTab.title}</Title>
-            <Description>{activeTab.description}</Description>
-          </TextWrapper>
-          <IconWrapper>
-            {/* <Icon icon={"mdi-light:arrow-right"} fontSize={32} /> <<< IMPLEMENTAR DEPOIS - PÁGINA INDIVIDUAL */}
-          </IconWrapper>
-        </Header>
+      <StyledLink href={`/projects/${activeTab.slug}`}>
+        <ContentWrapper>
+          <Header>
+            <TextWrapper>
+              <Title>{tabs[activeTabIndex].icon} {activeTab.title}</Title>
+              <Description>{activeTab.description}</Description>
+            </TextWrapper>
+            <IconWrapper />
+          </Header>
 
-        <ImageWrapper>
-          <Image
-            src={activeTab.img.src}
-            alt={`${activeTab.title} Preview`}
-            layout="responsive"
-            width={800}
-            height={400}
-          />
-        </ImageWrapper>
-      </ContentWrapper>
+          <ImageWrapper>
+            <Image
+              src={activeTab.img.src}
+              alt={`${activeTab.title} Preview`}
+              layout="responsive"
+              width={800}
+              height={400}
+            />
+          </ImageWrapper>
+        </ContentWrapper>
+      </StyledLink>
     </Container>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowRight, ChevronRight } from "lucide-react";
 import {
   Container,
   ContentWrapper,

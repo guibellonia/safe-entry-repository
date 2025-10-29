@@ -1,6 +1,7 @@
 "use client";
 import styled from "styled-components";
 import { theme } from "@/constants/theme";
+import Link from "next/link";
 
 interface TabItemProps {
   $active?: boolean;
@@ -44,6 +45,15 @@ export const TabItem = styled.li<TabItemProps>`
     $active ? theme.colors.primaryHover : theme.colors.backgroundHover};
   }
 `;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.1s ease;
+  &:hover {
+    color: ${theme.colors.textMutedHover};
+  }
+`
 
 export const ContentWrapper = styled.div`
   max-width: 1320px;

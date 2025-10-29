@@ -1,3 +1,4 @@
+import { Figtree } from 'next/font/google';
 import { theme } from "@/constants/theme";
 import styled from "styled-components";
 
@@ -54,7 +55,7 @@ export const StyledInput = styled.input<InputTypes>`
   outline: none;
   transition: box-shadow 0.2s ease;
   box-shadow: 0 0
-    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 2px" : 0)} ${theme.colors.primary};
+    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 3px" : 0)} ${theme.colors.primary}90;
   font-size: 1rem;
 `;
 
@@ -67,7 +68,7 @@ export const StyledTextArea = styled.textarea<InputTypes>`
       $error ? theme.colors.red : theme.colors.fadedBlack};
   transition: box-shadow 0.2s ease;
   box-shadow: 0 0
-    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 2px" : 0)} ${theme.colors.primary};
+    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 3px" : 0)} ${theme.colors.primary}90;
   outline: none;
   font-family: var(--font-Figtree);
   font-size: 1rem;
