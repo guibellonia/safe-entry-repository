@@ -30,7 +30,6 @@ import {
   Projector,
   Trophy,
 } from "lucide-react";
-import { theme } from "@/constants/theme";
 
 type Props = {
   params: Promise<{ slug: string }>;

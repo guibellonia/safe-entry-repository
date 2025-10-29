@@ -1,4 +1,3 @@
-import { Figtree } from 'next/font/google';
 import { theme } from "@/constants/theme";
 import styled from "styled-components";
 

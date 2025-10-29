@@ -79,7 +79,7 @@ export const TabIconWrapper = styled.div<{ $active?: boolean }>`
   position: relative;
   color: ${({ $active }) =>
     $active ? theme.colors.background : theme.colors.backgroundHover};
-  font-size: 1em; // match icon size to font
+  font-size: 1em;
   svg {
     width: 1em;
     height: 1em;
