@@ -54,7 +54,7 @@ export const StyledInput = styled.input<InputTypes>`
   outline: none;
   transition: box-shadow 0.2s ease;
   box-shadow: 0 0
-    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 4px" : 0)} ${theme.colors.primary + 75};
+    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 2px" : 0)} ${theme.colors.primary};
   font-size: 1rem;
 `;
 
@@ -67,7 +67,7 @@ export const StyledTextArea = styled.textarea<InputTypes>`
       $error ? theme.colors.red : theme.colors.fadedBlack};
   transition: box-shadow 0.2s ease;
   box-shadow: 0 0
-    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 4px" : 0)} ${theme.colors.primary + 75};
+    ${({ $isSelected }: InputTypes) => ($isSelected ? "1px 2px" : 0)} ${theme.colors.primary};
   outline: none;
   font-family: var(--font-Figtree);
   font-size: 1rem;

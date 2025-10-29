@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface TabItemType {
   title: string;
   description: string;
@@ -9,6 +11,10 @@ export interface TabItemType {
     | "DevOps"
     | "Designer"
     | "Data Analyst"
+    | "Database Analyst"
+    | "Software Engineer"
+    | "Project Architect"
+    | "Quality Assurance"
   )[];
   linkedin: string;
   instagram: string;

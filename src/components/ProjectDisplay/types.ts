@@ -4,6 +4,7 @@ export interface TabItemType {
     src: string;
   };
   description: string;
+  icon: React.ReactNode;
 }
 
 export interface ProjectDisplayProps {

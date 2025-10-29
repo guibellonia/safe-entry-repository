@@ -13,11 +13,12 @@ import {
   IconWrapper,
 } from "./styles";
 import { ProjectDisplayProps } from "./types";
+import { Lock } from "lucide-react";
 
 export default function ProjectDisplay({
   tabs,
-  activeTabIndex,
   onTabChange,
+  activeTabIndex,
 }: ProjectDisplayProps) {
   const activeTab = tabs[activeTabIndex];
 
@@ -38,11 +39,11 @@ export default function ProjectDisplay({
       <ContentWrapper>
         <Header>
           <TextWrapper>
-            <Title>{activeTab.title}</Title>
+            <Title>{tabs[activeTabIndex].icon} {activeTab.title}</Title>
             <Description>{activeTab.description}</Description>
           </TextWrapper>
           <IconWrapper>
-            {/* <Icon icon={"mdi-light:arrow-right"} fontSize={32} /> */}
+            {/* <Icon icon={"mdi-light:arrow-right"} fontSize={32} /> <<< IMPLEMENTAR DEPOIS - PÁGINA INDIVIDUAL */}
           </IconWrapper>
         </Header>
 

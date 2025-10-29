@@ -1,6 +1,8 @@
 "use client";
 import { theme } from "@/constants/theme";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { ArrowDown, ChevronDown } from "lucide-react";
+
 import styled from "styled-components";
 interface TabItemProps {
   $active?: boolean;
@@ -9,27 +11,30 @@ interface TabItemProps {
 interface TagProps {
   $type: keyof typeof tagColors;
 }
+
 export const tagColors: Record<string, string> = {
   "Front-End": "#4CAF50",
   "Back-End": "#2196F3",
-  "Project Owner": "#FF9800",
-  "Full-Stack": "#9C27B0",
-  "DevOps": "#19bde3",
-  Designer: "#E91E63",
+  "Project Owner": "#df6513",
+  "Full-Stack": "#df6513",
+  "DevOps": "#3F51B5",
+  Designer: theme.colors.primary,
   "Data Analyst": "#3F51B5",
+  "Database Analyst": "#750000",
+  "Software Engineer": "#6c0bc7",
+  "Project Architect": "#ff5e00",
+  "Quality Assurance": "#133b6e",
 };
+
 export const Container = styled.section`
   max-width: 1320px;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: ${theme.colors.secondary};
   border-radius: 0.5rem;
   gap: 0.5rem;
   padding: 0.5rem;
-  @media ${theme.media.tablet} {
-    flex-direction: column;
-  }
 `;
 export const TabList = styled.ul`
   width: 100%;
@@ -37,30 +42,80 @@ export const TabList = styled.ul`
   border-radius: 0.5rem;
   background-color: ${theme.colors.secondary};
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   list-style: none;
   gap: 0.5rem;
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const TabItem = styled.li<TabItemProps>`
   width: 100%;
   padding: 1rem;
   border-radius: 0.25rem;
-  background: ${({ $active }: TabItemProps) =>
+  background: ${({ $active }) =>
     $active ? theme.colors.primary : theme.colors.secondary};
   color: ${({ $active }) =>
     $active ? theme.colors.background : theme.colors.background};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.1s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+
   &:hover {
-    background: ${({ $active }: TabItemProps) =>
-      $active ? theme.colors.primaryHover : theme.colors.secondaryHover};
+    background: ${({ $active }) =>
+    $active ? theme.colors.primaryHover : theme.colors.secondaryHover};
+  }
+`;
+
+export const TabIconWrapper = styled.div<{ $active?: boolean }>`
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  position: relative;
+  color: ${({ $active }) =>
+    $active ? theme.colors.background : theme.colors.backgroundHover};
+  font-size: 1em; // match icon size to font
+  svg {
+    width: 1em;
+    height: 1em;
+    transition: all 0.3s ease;
+  }
+
+  ${TabItem}:hover & {
+    color: ${theme.colors.background};
+  }
+`;
+
+export const ChevronIcon = styled(ChevronDown) <{ $active?: boolean }>`
+  width: 1.5em;
+  height: 1.5em;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+  opacity: ${({ $active }) => ($active ? 0 : 1)};
+  ${TabItem}:hover & {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+`;
+
+export const ArrowIcon = styled(ArrowDown) <{ $active?: boolean }>`
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+  transform: ${({ $active }) => ($active ? "scaleY(1)" : "scaleY(0)")};
+  ${TabItem}:hover & {
+    transform: scaleY(1);
   }
 `;
 
 export const ContentWrapper = styled.div`
-  max-width: 800px;
   border: 1px solid ${theme.colors.fadedBlack};
   border-radius: 0.5rem;
   background-color: ${theme.colors.background};
@@ -81,15 +136,21 @@ export const TagsWrapper = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
 `;
 export const Tag = styled.div<TagProps>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
+  border: 1px solid ${({ $type }) => tagColors[$type]};
+  border-radius: 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: white;
-  background-color: ${({ $type }) => tagColors[$type]};
+  color: ${({ $type }) => tagColors[$type]};
+  background-color: ${({ $type }) => tagColors[$type]}25;
 `;
 
 export const SocialsWrapper = styled.div`

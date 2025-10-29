@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { ProjectsContainer } from "./styles";
 import ProjectDisplay from "@/components/ProjectDisplay";
 import { StyledSubtitle, StyledTitle, TitleWrapper } from "../styles";
+import { Lock, PawPrint } from "lucide-react";
+import { projects } from "@/data/projects";
+import Link from "next/link";
 
 export default function Projetos() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -14,27 +17,27 @@ export default function Projetos() {
         <StyledSubtitle>Projetos que desenvolvemos desde 2023</StyledSubtitle>
       </TitleWrapper>
       <ProjectDisplay
-        tabs={[
-          {
-            title: "Safe Entry",
-            description:
-              "Projeto desenvolvido com React Native, Expo, C#, Supabase, MongoDB e Azure, com o objetivo de aumentar a segurança e facilitar o controle de entradas para condomínios. Oferece registro digital de entradas, QR Codes para visitantes e comunicação integrada com a administração.",
-            img: {
-              src: "/images/call-to-action.png",
-            },
-          },
-          {
-            title: "Fazendata",
-            description:
-              "Aplicativo desenvolvido com React Native, Expo, NestJS e Supabase, de gestão de gado leiteiro com foco em produtividade, integração com a tecnologia NFC para controle de informações do gado, funcionalidades de cadastro, edição, listagem e controle gado, para fazendas de pequeno e grande porte.",
-            img: {
-              src: "/images/fazendata-call-to-action.png",
-            },
-          },
-        ]}
+        tabs={projects.map((p, i) => ({
+          title: p.title,
+          description: p.description,
+          img: { src: p.img.src },
+          // fallback icons (visual)
+          icon: i === 0 ? <Lock /> : <PawPrint />,
+        }))}
         activeTabIndex={activeTabIndex}
         onTabChange={(index) => setActiveTabIndex(index)}
       />
+
+      <div style={{ marginTop: 16 }}>
+        <h4>Ver páginas individuais</h4>
+        <ul style={{ listStyle: "none", padding: 0, display: "flex", gap: 12 }}>
+          {projects.map((p) => (
+            <li key={p.slug}>
+              <Link href={`/projects/${p.slug}`}>{p.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </ProjectsContainer>
   );
 }

@@ -16,7 +16,9 @@ export default function Hero() {
         <StyledHeroSubtitle>
           Junte-se a nós e tenha seu negócio nas estrelas!
         </StyledHeroSubtitle>
-        <StyledHeroTitle>FOURCODING</StyledHeroTitle>
+        <StyledHeroTitle>
+          FOURCODING
+        </StyledHeroTitle>
       </TitleWrapper>
     </HeroContainer>
   );
